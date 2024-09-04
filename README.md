@@ -18,6 +18,17 @@ The script is executed by running "Evaluate Notebook". The user is prompted to e
 If you use this software in your work, please cite:
 
 ```
+@article{Haxton:2024ecp,
+    author = "Haxton, W. C. and Rule, Evan",
+    title = "{Distinguishing charged lepton flavor violation scenarios with inelastic $\mu\rightarrow e$ conversion}",
+    eprint = "2404.17166",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    reportNumber = "N3AS-24-014",
+    month = "4",
+    year = "2024"
+}
+
 @article{Mu2e:2022ggl,
     author = "Abdi, F. and others",
     collaboration = "Mu2e",
