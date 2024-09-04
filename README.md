@@ -17,6 +17,7 @@ The script is executed by running "Evaluate Notebook". The user is prompted to e
 # Citation
 If you use this software in your work, please cite:
 
+```
 @article{Mu2e:2022ggl,
     author = "Abdi, F. and others",
     collaboration = "Mu2e",
@@ -32,5 +33,5 @@ If you use this software in your work, please cite:
     pages = "54",
     year = "2023"
 }
-
+```
 
