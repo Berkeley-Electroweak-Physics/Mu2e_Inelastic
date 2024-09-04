@@ -15,6 +15,22 @@ After cloning the Mu2e_Inelastic repository, the first line of Mu2e_Inelastic.nb
 The script is executed by running "Evaluate Notebook". The user is prompted to enter the single-nucleon NRET low-energy constants. The code expects the LECs to be dimensionless with respect to the weak scale, as defined in Eq. (17) of []. Any omitted LECs are assumed to be zero.
 
 # Citation
-If you use this software in your work, please cite
+If you use this software in your work, please cite:
+
+@article{Mu2e:2022ggl,
+    author = "Abdi, F. and others",
+    collaboration = "Mu2e",
+    title = "{Mu2e Run I Sensitivity Projections for the Neutrinoless $\mu^- \to e^-$ Conversion Search in Aluminum}",
+    eprint = "2210.11380",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "FERMILAB-PUB-22-749-PPD",
+    doi = "10.3390/universe9010054",
+    journal = "Universe",
+    volume = "9",
+    number = "1",
+    pages = "54",
+    year = "2023"
+}
 
 
