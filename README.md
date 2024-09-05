@@ -12,7 +12,7 @@ The subfolder ```Mu2e_Inelastic/Mu2e_data``` contains the simulated electron spe
 After cloning the Mu2e_Inelastic repository, the first line of ```Mu2e_Inelastic_v1.nb``` should be edited so that ```InelasticRoot``` points to the root folder ```Mu2e_Inelastic``` with subfolders ```Mu2e_Inelastic/Densities``` and ```Mu2e_Inelastic/Mu2e_Data```
 
 # Execution
-The script is executed by running "Evaluate Notebook". The user is prompted to enter the single-nucleon NRET low-energy constants (LECs) $\tilde{c}_i^\tau$. The code expects the LECs to be dimensionless with respect to the weak scale, as defined in Eq. (17) of []. They are input one at a time in the format $\\{i, ~\tilde{c}_i^0, ~\tilde{c}_i^1\\}$. One does not need to enter the values of all 16 NRET LECs. Once all non-zero values have been entered, the user can enter $\\{0, ~0, ~0\\}$ to proceed with the calculation. Any unspecified LECs are assumed to be zero.
+The script is executed by running "Evaluate Notebook". The user is prompted to enter the single-nucleon NRET low-energy constants (LECs) $\tilde{c}_i^\tau$, where $\tau$ denotes the isospin. The code expects the LECs to be dimensionless with respect to the weak scale, as defined in Eq. (17) of []. They are input one at a time in the format $\\{i, ~\tilde{c}_i^0, ~\tilde{c}_i^1\\}$. One does not need to enter the values of all 16 NRET LECs. Once all non-zero values have been entered, the user can enter $\\{0, ~0, ~0\\}$ to proceed with the calculation. Any unspecified LECs are assumed to be zero.
 
 # Citation
 If you use this software in your work, please cite:
