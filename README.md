@@ -16,6 +16,9 @@ After cloning the Mu2e_Inelastic repository, the first line of ```Mu2e_Inelastic
 # Execution
 The script is executed by running ```Evaluate Notebook```. The user is prompted to enter the single-nucleon NRET low-energy constants (LECs) $\tilde{c}_i^\tau$, where $\tau$ denotes the isospin. The code expects the LECs to be dimensionless with respect to the weak scale, as defined in Eq. (17) of Ref. [2]. The LECs are input one at a time in the format $\\{i, ~\tilde{c}_i^0, ~\tilde{c}_i^1\\}$. The user does not need to enter the values of all 16 NRET LECs. Once all non-zero values have been entered, the user can enter $\\{0, ~0, ~0\\}$ to proceed with the calculation. Any unspecified LECs are assumed to be zero.
 
+# Output
+Given the specified LECs, the code calculates the $\mu\rightarrow e$ conversion rate and branching ratio for each of the four transitions of interest. Each calculation is performed 3 times with each of the different shell-model interactions. The results are printed in the notebook. Then, the code uses the calculated branching ratios along with the elastic conversion-electron spectrum computed by the Mu2e collaboration to generate the expected conversion electron spectrum corresponding to the user-specified CLFV scenario. Separate spectra are produced for each transition, and the combined spectrum is calculated by combining these results. These 5 spectra are written to separate files in the folder  ```/Mu2e_Inelastic-main/Output/```
+
 # Citation
 If you use this software in your work, please cite:
 
