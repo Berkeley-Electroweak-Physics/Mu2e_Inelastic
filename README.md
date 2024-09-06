@@ -1,5 +1,5 @@
 # Mu2e_Inelastic
-Mathematica code for analyzing inelastic muon-to-electron conversion on Al27
+Mathematica code for analyzing inelastic muon-to-electron conversion on $^{27}$Al
 
 # Contents
 This repository contains the Mathematica notebook ```Mu2e_Inelastic_v1.nb``` and two subfolders. 
