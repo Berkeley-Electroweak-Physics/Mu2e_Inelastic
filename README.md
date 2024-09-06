@@ -11,7 +11,7 @@ The subfolder ```Mu2e_Inelastic/Densities``` contains one-body density matrices 
 The subfolder ```Mu2e_Inelastic/Mu2e_data``` contains the simulated electron spectra computed by the Mu2e collaboration [3]. The most relevant files are ```mu2e_response_CE.txt``` and ```mu2e_response_DIO.txt```, which respectively contain the anticipated elastic conversion-electron (CE) signal and the primary background from muon decay-in-orbit (DIO). All other backgrounds are negligible.
 
 # Setup
-After cloning the Mu2e_Inelastic repository, the first line of ```Mu2e_Inelastic_v1.nb``` should be edited so that ```InelasticRoot``` points to the root folder ```Mu2e_Inelastic``` with subfolders ```Mu2e_Inelastic/Densities``` and ```Mu2e_Inelastic/Mu2e_Data```
+After cloning the Mu2e_Inelastic repository, the first line of ```Mu2e_Inelastic_v1.nb``` should be edited so that ```InelasticRoot``` points to the root folder ```Mu2e_Inelastic-main``` with subfolders ```Mu2e_Inelastic/Densities``` and ```Mu2e_Inelastic/Mu2e_Data```
 
 # Execution
 The script is executed by running ```Evaluate Notebook```. The user is prompted to enter the single-nucleon NRET low-energy constants (LECs) $\tilde{c}_i^\tau$, where $\tau$ denotes the isospin. The code expects the LECs to be dimensionless with respect to the weak scale, as defined in Eq. (17) of Ref. [2]. The LECs are input one at a time in the format $\\{i, ~\tilde{c}_i^0, ~\tilde{c}_i^1\\}$. The user does not need to enter the values of all 16 NRET LECs. Once all non-zero values have been entered, the user can enter $\\{0, ~0, ~0\\}$ to proceed with the calculation. Any unspecified LECs are assumed to be zero.
