@@ -2,9 +2,9 @@
 Mathematica code for analyzing inelastic muon-to-electron conversion on the nuclear target $`^{27}`$Al. Implements the nuclear effective theory developed in Refs. [1,2].
 
 # Contents
-This repository contains the Mathematica notebook ```mu2e_Inelastic_v1.nb```, the Mathematica package file ```mu2e_Inelastic_v1.wl```, and two subfolders. 
+This repository contains the Mathematica notebook ```Mu2e_Inelastic_v1.nb```, the Mathematica package file ```Mu2e_inelastic_v1.wl```, and two subfolders. 
 
-```mu2e_Inelastic_v1.nb``` is the primary script that the user will interact with. Upon execution, it loads the necessary functions from the package file ```mu2e_Inelastic_v1.wl```. Typical users should not need to modify the package file.
+```Mu2e_Inelastic_v1.nb``` is the primary script that the user will interact with. Upon execution, it loads the necessary functions from the package file ```Mu2e_Inelastic_v1.wl```. Typical users should not need to modify the package file.
 
 The subfolder ```Mu2e_Inelastic/Densities``` contains one-body density matrices that govern the relevant transition amplitudes in Al27. There are 12 total density files, representing 4 transitions (proceeding to the ground and first 3 excited states) and 3 different shell-model interactions (Brown-Wildenthal, USDA, and USDB), see Ref. [2] for details. The file names indicate the interaction and transition. For example, ```Al27_usda_0_2.txt``` contains the density matrices for transitions from the ground state (5/2+, 0.0 MeV) to the second excited state, (3/2+, 1.015 MeV).
 
