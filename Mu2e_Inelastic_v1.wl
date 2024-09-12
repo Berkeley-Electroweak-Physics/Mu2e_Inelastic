@@ -500,14 +500,27 @@ WPhiTSigmaP[iFS_,qm_,y_,cs_]:=2 qm *(4 Pi)/(2JI[iFS]+1)Sum[If[J0[iFS,jj]==J0[iFS
 WPhiTPSigma[iFS_,qm_,y_,cs_]:=-2 qm *(4 Pi)/(2JI[iFS]+1)Sum[If[J0[iFS,jj]==J0[iFS,jjp]&&(RPhiTPSigma[T0[iFS,jj],T0[iFS,jjp],cs]!=0.0), FPhiTP[iFS,jj,y]FSigma[iFS,jjp,y]RPhiTPSigma[T0[iFS,jj],T0[iFS,jjp],cs],0],{jjp,1,NumDMs[iFS]},{jj,1,NumDMs[iFS]}]
 
 
+(* ::Text:: *)
+(*Alternate expressions for DeltaTPP in terms of M, after applying current conservation*)
+
+
+WDeltaTPPCC[iFS_,qm_,y_,cs_]:=(\[CapitalDelta]ENuc[[iFS]]/mN)^2 *(4 Pi)/(2JI[iFS]+1)Sum[If[J0[iFS,jj]==J0[iFS,jjp]&&(RDeltaTPP[T0[iFS,jj],T0[iFS,jjp],cs]!=0.0),FM[iFS,jj,y] FM[iFS,jjp,y]RDeltaTPP[T0[iFS,jj],T0[iFS,jjp],cs],0],{jjp,1,NumDMs[iFS]},{jj,1,NumDMs[iFS]}]
+
+
+WDeltaTPPPhiPPCC[iFS_,qm_,y_,cs_]:=-2 qm *(\[CapitalDelta]ENuc[[iFS]]/mN) *4 Pi/(2JI[iFS]+1)Sum[If[J0[iFS,jj]==J0[iFS,jjp]&&(RDeltaTPPPhiPP[T0[iFS,jj],T0[iFS,jjp],cs]!=0.0), FM[iFS,jj,y]FPhiPP[iFS,jjp,y]RDeltaTPPPhiPP[T0[iFS,jj],T0[iFS,jjp],cs],0],{jjp,1,NumDMs[iFS]},{jj,1,NumDMs[iFS]}]
+
+
+WDeltaTPPMCC[iFS_,qm_,y_,cs_]:=2 *(\[CapitalDelta]ENuc[[iFS]]/mN) *4 Pi/(2JI[iFS]+1)Sum[If[J0[iFS,jj]==J0[iFS,jjp]&&(RDeltaTPPM[T0[iFS,jj],T0[iFS,jjp],cs]!=0.0),FM[iFS,jj,y] FM[iFS,jjp,y]RDeltaTPPM[T0[iFS,jj],T0[iFS,jjp],cs],0],{jjp,1,NumDMs[iFS]},{jj,1,NumDMs[iFS]}]
+
+
 Heff[iFS_,qm_,y_,cs_]:=Module[{Wtot},
 Wtot=0.0;
 
 Wtot+=WM[iFS,qm,y,cs]+WSigmaPP[iFS,qm,y,cs]+WSigma[iFS,qm,y,cs]+WSigmaP[iFS,qm,y,cs];
 
-Wtot+=WDeltaTPP[iFS,qm,y,cs]+WOmegaT[iFS,qm,y,cs]+WPhiPP[iFS,qm,y,cs]+WDeltaTPPPhiPP[iFS,qm,y,cs]+WDelta[iFS,qm,y,cs]+WDeltaP[iFS,qm,y,cs]+WPhiTP[iFS,qm,y,cs]+WPhiT[iFS,qm,y,cs]+WDeltaPhiT[iFS,qm,y,cs]+WDeltaPPhiTP[iFS,qm,y,cs];
+Wtot+=WDeltaTPPCC[iFS,qm,y,cs]+WOmegaT[iFS,qm,y,cs]+WPhiPP[iFS,qm,y,cs]+WDeltaTPPPhiPPCC[iFS,qm,y,cs]+WDelta[iFS,qm,y,cs]+WDeltaP[iFS,qm,y,cs]+WPhiTP[iFS,qm,y,cs]+WPhiT[iFS,qm,y,cs]+WDeltaPhiT[iFS,qm,y,cs]+WDeltaPPhiTP[iFS,qm,y,cs];
 
-Wtot+=WDeltaTPPM[iFS,qm,y,cs]+WPhiPPM[iFS,qm,y,cs]+WOmegaTSigmaPP[iFS,qm,y,cs]+WDeltaSigmaP[iFS,qm,y,cs]+WDeltaPSigma[iFS,qm,y,cs]+WPhiTPSigma[iFS,qm,y,cs]+WPhiTSigmaP[iFS,qm,y,cs];
+Wtot+=WDeltaTPPMCC[iFS,qm,y,cs]+WPhiPPM[iFS,qm,y,cs]+WOmegaTSigmaPP[iFS,qm,y,cs]+WDeltaSigmaP[iFS,qm,y,cs]+WDeltaPSigma[iFS,qm,y,cs]+WPhiTPSigma[iFS,qm,y,cs]+WPhiTSigmaP[iFS,qm,y,cs];
 
 Return[Wtot];
 ];
