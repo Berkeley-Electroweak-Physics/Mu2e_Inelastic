@@ -504,13 +504,13 @@ WPhiTPSigma[iFS_,qm_,y_,cs_]:=-2 qm *(4 Pi)/(2JI[iFS]+1)Sum[If[J0[iFS,jj]==J0[iF
 (*Alternate expressions for DeltaTPP in terms of M, after applying current conservation*)
 
 
-WDeltaTPPCC[iFS_,qm_,y_,cs_]:=(\[CapitalDelta]ENuc[[iFS]]/mN)^2 *(4 Pi)/(2JI[iFS]+1)Sum[If[J0[iFS,jj]==J0[iFS,jjp]&&(RDeltaTPP[T0[iFS,jj],T0[iFS,jjp],cs]!=0.0),FM[iFS,jj,y] FM[iFS,jjp,y]RDeltaTPP[T0[iFS,jj],T0[iFS,jjp],cs],0],{jjp,1,NumDMs[iFS]},{jj,1,NumDMs[iFS]}]
+WDeltaTPPCC[iFS_,qm_,y_,cs_]:=1/qm^2*(\[CapitalDelta]ENuc[[iFS]]/mN)^2 *(4 Pi)/(2JI[iFS]+1)Sum[If[J0[iFS,jj]==J0[iFS,jjp]&&(RDeltaTPP[T0[iFS,jj],T0[iFS,jjp],cs]!=0.0),FM[iFS,jj,y] FM[iFS,jjp,y]RDeltaTPP[T0[iFS,jj],T0[iFS,jjp],cs],0],{jjp,1,NumDMs[iFS]},{jj,1,NumDMs[iFS]}]
 
 
-WDeltaTPPPhiPPCC[iFS_,qm_,y_,cs_]:=-2 qm *(\[CapitalDelta]ENuc[[iFS]]/mN) *4 Pi/(2JI[iFS]+1)Sum[If[J0[iFS,jj]==J0[iFS,jjp]&&(RDeltaTPPPhiPP[T0[iFS,jj],T0[iFS,jjp],cs]!=0.0), FM[iFS,jj,y]FPhiPP[iFS,jjp,y]RDeltaTPPPhiPP[T0[iFS,jj],T0[iFS,jjp],cs],0],{jjp,1,NumDMs[iFS]},{jj,1,NumDMs[iFS]}]
+WDeltaTPPPhiPPCC[iFS_,qm_,y_,cs_]:=-2 *(\[CapitalDelta]ENuc[[iFS]]/mN) *4 Pi/(2JI[iFS]+1)Sum[If[J0[iFS,jj]==J0[iFS,jjp]&&(RDeltaTPPPhiPP[T0[iFS,jj],T0[iFS,jjp],cs]!=0.0), FM[iFS,jj,y]FPhiPP[iFS,jjp,y]RDeltaTPPPhiPP[T0[iFS,jj],T0[iFS,jjp],cs],0],{jjp,1,NumDMs[iFS]},{jj,1,NumDMs[iFS]}]
 
 
-WDeltaTPPMCC[iFS_,qm_,y_,cs_]:=2 *(\[CapitalDelta]ENuc[[iFS]]/mN) *4 Pi/(2JI[iFS]+1)Sum[If[J0[iFS,jj]==J0[iFS,jjp]&&(RDeltaTPPM[T0[iFS,jj],T0[iFS,jjp],cs]!=0.0),FM[iFS,jj,y] FM[iFS,jjp,y]RDeltaTPPM[T0[iFS,jj],T0[iFS,jjp],cs],0],{jjp,1,NumDMs[iFS]},{jj,1,NumDMs[iFS]}]
+WDeltaTPPMCC[iFS_,qm_,y_,cs_]:=2/qm *(\[CapitalDelta]ENuc[[iFS]]/mN) *4 Pi/(2JI[iFS]+1)Sum[If[J0[iFS,jj]==J0[iFS,jjp]&&(RDeltaTPPM[T0[iFS,jj],T0[iFS,jjp],cs]!=0.0),FM[iFS,jj,y] FM[iFS,jjp,y]RDeltaTPPM[T0[iFS,jj],T0[iFS,jjp],cs],0],{jjp,1,NumDMs[iFS]},{jj,1,NumDMs[iFS]}]
 
 
 Heff[iFS_,qm_,y_,cs_]:=Module[{Wtot},
