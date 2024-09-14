@@ -8,7 +8,7 @@ This repository contains the Mathematica notebook ```Mu2e_Inelastic_v1.nb```, th
 
 The subfolder ```/Densities/``` contains one-body density matrices that govern the relevant transition amplitudes in Al27. There are 12 total density files, representing 4 transitions (proceeding to the ground and first 3 excited states) and 3 different shell-model interactions (Brown-Wildenthal, USDA, and USDB), see Ref. [2] for details. The file names indicate the interaction and transition. For example, ```Al27_usda_0_2.txt``` contains the density matrices for transitions from the ground state (5/2+, 0.0 MeV) to the second excited state, (3/2+, 1.015 MeV).
 
-The subfolder ```/Mu2e_data/``` contains the simulated electron spectra computed by the Mu2e collaboration [3]. The most relevant files are ```mu2e_response_CE.txt``` and ```mu2e_response_DIO.txt```, which respectively contain the anticipated elastic conversion-electron (CE) signal and the primary background from muon decay-in-orbit (DIO). All other backgrounds are negligible.
+The subfolder ```/Mu2e_Data/``` contains the simulated electron spectra computed by the Mu2e collaboration [3]. The most relevant files are ```mu2e_response_CE.txt``` and ```mu2e_response_DIO.txt```, which respectively contain the anticipated elastic conversion-electron (CE) signal and the primary background from muon decay-in-orbit (DIO). All other backgrounds are negligible.
 
 # Setup
 After cloning the Mu2e_Inelastic repository, the first line of ```Mu2e_Inelastic_v1.nb``` should be edited so that ```InelasticRoot``` points to the root folder ```/Mu2e_Inelastic-main/``` with subfolders ```/Densities/``` and ```/Mu2e_Data/```
