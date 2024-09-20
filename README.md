@@ -36,6 +36,17 @@ If you use this software in your work, please cite:
     year = "2024"
 }
 
+@article{Haxton:2024amf,
+    author = "Haxton, W. C. and Rule, Evan",
+    title = "{Nuclear-level effective theory of $\mu\rightarrow e$ conversion: Inelastic process}",
+    eprint = "2409.10581",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    reportNumber = "N3AS-24-022, LA-UR-24-28651",
+    month = "9",
+    year = "2024"
+}
+
 @article{Mu2e:2022ggl,
     author = "Abdi, F. and others",
     collaboration = "Mu2e",
@@ -55,6 +66,6 @@ If you use this software in your work, please cite:
 # References
 [1] [Haxton, W. C., and Rule, E., hep-ph/2404.17166](https://arxiv.org/abs/2404.17166)
 
-[2] Haxton, W. C., and Rule, E., hep-ph/2409.xxxxx
+[2] [Haxton, W. C., and Rule, E., hep-ph/2409.10581](https://arxiv.org/abs/2409.10581)
 
 [3] [Mu2e Collaboration, Universe 9 (2023) 1, 54](https://www.mdpi.com/2218-1997/9/1/54)
